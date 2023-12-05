@@ -32,21 +32,18 @@
     </div>
   </div>
   <div class="center">
-    <h1 class="heading-2">People Near You</h1>
-    <div id="Main men" class="layout-layout quick-stack wf-layout-layout">
-      <div id="Jackson" class="layout-cell cell-2">
-        <a href="jacksons-profile.html" class="inline-block"><img src="images/Untitled-5.jpeg" loading="lazy" sizes="(max-width: 479px) 73vw, (max-width: 767px) 83vw, (max-width: 1149px) 87vw, 1000px" srcset="images/Untitled-5-p-500.jpeg 500w, images/Untitled-5-p-800.jpeg 800w, images/Untitled-5.jpeg 1000w" alt="">
-          <div class="text-block">Jackson Lofquist</div>
-        </a>
-      </div>
-      <div id="Jimi" class="layout-cell cell-2">
-        <a href="jimis-profile.html" class="inline-block"><img src="images/IMG_5612.jpeg" loading="lazy" sizes="(max-width: 479px) 73vw, (max-width: 767px) 83vw, (max-width: 1149px) 87vw, 1000px" srcset="images/IMG_5612-p-500.jpeg 500w, images/IMG_5612-p-800.jpeg 800w, images/IMG_5612.jpeg 1000w" alt="">
-          <div class="text-block">Jimi McDermott</div>
-        </a>
-      </div>
-      <div id="Alex" class="layout-cell cell-2"><img src="images/Polaroid_88.jpeg" loading="lazy" sizes="(max-width: 479px) 73vw, (max-width: 767px) 83vw, (max-width: 1149px) 87vw, 1000px" srcset="images/Polaroid_88-p-500.jpeg 500w, images/Polaroid_88-p-800.jpeg 800w, images/Polaroid_88.jpeg 1000w" alt="">
-        <div class="text-block">Alex Pegram</div>
-      </div>
+    <h1 class="heading">Find your thought of the day!</h1>
+    <div id="Main men" class="heading">
+        <script>
+          function randomPage() {
+            var pages = [
+              'feelaffirmed.html',
+            ];
+            var page = pages[Math.floor(Math.random() * pages.length)];
+            window.location.href = page;
+          } 
+        </script>
+        <button onclick="randomPage()" class="button">Search!</button>
     </div>
   </div>
   <div class="footer">
