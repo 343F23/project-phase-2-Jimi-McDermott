@@ -1,2 +1,5 @@
-fetch(https://www.affirmations.dev)
-    .then(res => console.log(res))
+async function getaffirmations() {
+  const response = await fetch('https://www.affirmations.dev/');
+  const data = await response.json();
+  return data;
+}
