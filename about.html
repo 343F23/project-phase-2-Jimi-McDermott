@@ -7,6 +7,11 @@
       width: 100%;
       height: 150px;
     }
+    h1 {text-align: center;}
+    p1 {text-align: center;}
+    label {text-align: center;}
+    img {display: block; margin-left: auto; margin-right: auto;}
+  </style>
   </style>
   <meta charset="utf-8">
   <title>About</title>
@@ -49,31 +54,38 @@
           </div>
         </div>
       </div>
-      <a href="#" class="button button">Edit my Profile</a>
     </div>
     <div class="all-images container">
-      <h1 class="photo-page-title center">Whats on your mind?</h1>
+      <h1 class="photo-page-title center">Do you have any suggestions for improvement?</h1>
       <form>
+        <select name="category" id="category">
+          <option value="suggestion">Suggestion</option>
+          <option value="complaint">Complaint</option>
+          <option value="compliment">Compliment</option>
         <textarea name="name" data-name="Name" placeholder="" id="name" required="" class="textarea"></textarea>
         <input type="submit" value="Submit" data-wait="Please wait..." class="button">
-        <script>
-          //when the user clicks submit, the text in the textarea will be saved to a database
-          //the text will be saved to the database with the user's name and the date
-          //the text will be displayed on the user's profile page
-        </script>
       </form>
+      <script>
+        function store() {
+          var category = document.getElementById("category").value;
+          var name = document.getElementById("name").value;
+          var message = document.getElementById("message").value;
+          localStorage.setItem("category", category);
+          localStorage.setItem("name", name);
+          localStorage.setItem("message", message);
+          const storage = JSON.stringify(localStorage);
+          console.log(storage);
+        }
+      </script>
+
   </div>
-  <section class="section-2">
-    <h1 class="heading">My Entries</h1>
-    <script> 
-    </script>
   </section>
   <div class="footer">
     <div class="container">
       <div>
-        <a href="#" class="icons"><img src="images/social-03.svg" width="20" alt="Facebook"></a>
-        <a href="#" class="icons"><img src="images/social-18.svg" width="20" alt="Twitter"></a>
-        <a href="#" class="icons"><img src="images/social-30.svg" width="20" alt="Email"></a>
+        <a href="https://www.facebook.com" class="icons"><img src="images/social-03.svg" width="20" alt="Facebook"></a>
+        <a href="https://www.twitter.com" class="icons"><img src="images/social-18.svg" width="20" alt="Twitter"></a>
+        <a href="https://www.gmail.com" class="icons"><img src="images/social-30.svg" width="20" alt="Email"></a>
       </div>
     </div>
   </div>
