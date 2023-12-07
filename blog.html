@@ -52,6 +52,10 @@
           <input type="text" id="quote" name="quote" placeholder="Enter your quote here!">
           <div class="center">
           <button type="submit" class="center">Submit!</button>
+          <script>
+            const quote = document.getElementById('quote');
+            const blob = new Blob(JSON.stringify(quote), {type: "application/json"});
+          </script>
           </div>
         </form>
       </body>
